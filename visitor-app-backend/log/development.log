@@ -39,3 +39,165 @@ FOREIGN KEY ("place_id")
   ↳ bin/rails:9
   [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlace Create (2.6ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Paris"], ["country", "France"], ["created_at", "2020-01-23 03:56:25.496098"], ["updated_at", "2020-01-23 03:56:25.496098"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisit Create (1.6ms)[0m  [1m[32mINSERT INTO "visits" ("venue", "visitor", "place_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["venue", "The Louvre"], ["visitor", "Renee"], ["place_id", 1], ["created_at", "2020-01-23 03:58:15.953197"], ["updated_at", "2020-01-23 03:58:15.953197"]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT  "visits".* FROM "visits" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" ORDER BY "places"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT  "visits".* FROM "visits" WHERE "visits"."place_id" = ? LIMIT ?[0m  [["place_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPlace Create (1.8ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "London"], ["country", "United Kingdom"], ["created_at", "2020-01-23 04:09:56.568047"], ["updated_at", "2020-01-23 04:09:56.568047"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlace Create (1.4ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Manchester"], ["country", "United Kingdom"], ["created_at", "2020-01-23 04:09:56.583593"], ["updated_at", "2020-01-23 04:09:56.583593"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mPlace Create (1.4ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Rio de Janeiro"], ["country", "Brazil"], ["created_at", "2020-01-23 04:09:56.597043"], ["updated_at", "2020-01-23 04:09:56.597043"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mPlace Create (3.0ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Montego Bay"], ["country", "Jamaica"], ["created_at", "2020-01-23 04:09:56.609174"], ["updated_at", "2020-01-23 04:09:56.609174"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPlace Create (1.6ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Phuket"], ["country", "Thailand"], ["created_at", "2020-01-23 04:09:56.622967"], ["updated_at", "2020-01-23 04:09:56.622967"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPlace Create (1.6ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Lagos"], ["country", "Nigeria"], ["created_at", "2020-01-23 04:09:56.635791"], ["updated_at", "2020-01-23 04:09:56.635791"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mPlace Create (1.4ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Tokyo"], ["country", "Japan"], ["created_at", "2020-01-23 04:09:56.647428"], ["updated_at", "2020-01-23 04:09:56.647428"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (24.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mPlace Create (1.4ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Cancun"], ["country", "Mexico"], ["created_at", "2020-01-23 04:09:56.675957"], ["updated_at", "2020-01-23 04:09:56.675957"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mPlace Create (2.3ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Mexico City"], ["country", "Mexico"], ["created_at", "2020-01-23 04:09:56.689039"], ["updated_at", "2020-01-23 04:09:56.689039"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPlace Create (1.5ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Rome"], ["country", "Italy"], ["created_at", "2020-01-23 04:09:56.701478"], ["updated_at", "2020-01-23 04:09:56.701478"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mPlace Create (1.4ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Tuscany"], ["country", "Italy"], ["created_at", "2020-01-23 04:09:56.712925"], ["updated_at", "2020-01-23 04:09:56.712925"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mPlace Create (1.4ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "New York"], ["country", "USA"], ["created_at", "2020-01-23 04:09:56.725688"], ["updated_at", "2020-01-23 04:09:56.725688"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" ORDER BY "places"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" ORDER BY "places"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-01-22 23:15:47 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nbert100/.rvm/gems/ruby-2.6.4/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nbert100/.rvm/gems/ruby-2.6.4/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nbert100/.rvm/gems/ruby-2.6.4/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (46.2ms)
+Completed 200 OK in 305ms (Views: 278.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2020-01-22 23:16:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/places" for ::1 at 2020-01-22 23:16:05 -0500
+Processing by Api::V1::PlacesController#index as HTML
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (1.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+Completed 200 OK in 114ms (Views: 100.9ms | ActiveRecord: 9.6ms)
+
+
