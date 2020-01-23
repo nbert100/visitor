@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  venue: MyString
+  when_visited: 2020-01-22
+  visited: false
+  comment: MyText
+  visitor: MyString
+  place: one
+
+two:
+  venue: MyString
+  when_visited: 2020-01-22
+  visited: false
+  comment: MyText
+  visitor: MyString
+  place: two
