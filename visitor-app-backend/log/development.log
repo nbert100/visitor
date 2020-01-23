@@ -201,3 +201,36 @@ Processing by Api::V1::PlacesController#index as HTML
 Completed 200 OK in 114ms (Views: 100.9ms | ActiveRecord: 9.6ms)
 
 
+Started GET "/api/v1/places" for ::1 at 2020-01-22 23:22:39 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (2.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+Completed 200 OK in 52ms (Views: 42.8ms | ActiveRecord: 8.5ms)
+
+
