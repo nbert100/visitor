@@ -7,18 +7,18 @@ class Api::V1::PlacesController < ApplicationController
 
     def show
         set_place
-        render json: @place, status: :ok
+        render json: place, status: :ok
     end
 
-    def new
-    end
+    # def new
+    # end
 
     def create
         place = Place.new(place_params)
         if place.save
-            render json: @place, status: 201
-        else 
-            render json: {errors: @place.errors.full_messages}
+            render json: place, status: 201
+        # else 
+        #     render json: {errors: place.errors.full_messages}
         end
     end
 
