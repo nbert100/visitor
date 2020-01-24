@@ -1,12 +1,17 @@
 class Api::V1::VisitsController < ApplicationController
 
     def index
-        visits = Visit.all 
-        render json: @visits, only: [:venue, :visitor], include: :place
+        if params[:place_id]
+            place = Place.find_by_id(params[:place_id])
+            render json: place.visits
+        else
+            visits = Visit.all 
+            render json: visits, only: [:venue, :visitor]
+        end
     end
 
     def show
-        set_visit
+        # set_visit
         render json: @visit
     end
 
@@ -17,6 +22,11 @@ class Api::V1::VisitsController < ApplicationController
     end
 
     def update
+        if visit.update(visit_params)
+            render json: @visit
+        else
+            render json: @place
+        end
     end
 
     def destroy

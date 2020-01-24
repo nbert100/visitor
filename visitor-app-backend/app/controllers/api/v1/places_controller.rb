@@ -1,7 +1,8 @@
 class Api::V1::PlacesController < ApplicationController
+
     def index
         places = Place.all 
-        render json: places, include: :visits, status: :ok
+        render json: places, include: :visits, status: 200
     end
 
     def show
