@@ -11,8 +11,19 @@ class Places {
     }
 
     fetchAndLoadPlaces() {
-        this.adapter.getNotes().then(places => {
-            console.log(places)
+        this.adapter
+        .getPlaces()
+        .then(places => {
+            places.forEach(place => this.places.push(new Place(place)))
+            console.log(this.places)
         })
+        .then(() => {
+            this.render()
+        })
+    }
+
+    render() {
+        const placesContainer = document.getElementById("places-container")
+        placesContainer.innerHTML = this.places.map(place => `<li>${place.city}, ${place.country}</li>`).join('')
     }
 }
