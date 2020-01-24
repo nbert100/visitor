@@ -8,6 +8,18 @@ class PlacesAdapter {
         return fetch(this.baseURL).then(res => res.json()
         )
     }
+
+    createPlace(city_value, country_value) {
+        const place = {
+            city: city_value,
+            country: country_value
+        }
+        return fetch(this.baseURL, {
+            method: 'POST'
+            city: JSON.stringify({ place: city })
+            country: JSON.stringify()
+        })
+    }
 }
 
 // adapter = new PlacesAdapter()

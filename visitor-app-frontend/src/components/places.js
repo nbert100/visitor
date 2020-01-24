@@ -6,8 +6,22 @@ class Places {
     constructor() {
         this.places = []
         this.adapter = new PlacesAdapter()
-        //this.bindEventListeners()
+        this.initBindingsAndEventListeners()
         this.fetchAndLoadPlaces()
+    }
+
+    initBindingsAndEventListeners() {
+        this.placesContainer = document.getElementById("places-container")
+        this.newPlaceCity = document.getElementById("new-city")
+        this.newPlaceCountry = document.getElementById("new-country")
+        this.placeForm = document.getElementById("new-place-form")
+        this.placeForm.addEventListener("submit", this.createPlace.bind(this))
+    }
+
+    createPlace(e) {
+        e.preventDefault()
+        const value = this.newPlaceCity.value
+        this.adapter.createPlace(value)
     }
 
     fetchAndLoadPlaces() {
@@ -22,8 +36,7 @@ class Places {
         })
     }
 
-    render() {
-        const placesContainer = document.getElementById("places-container")
-        placesContainer.innerHTML = this.places.map(place => `<li>${place.city}, ${place.country}</li>`).join('')
+    render() {    
+        this.placesContainer.innerHTML = this.places.map(place => place.renderLi()).join("")
     }
 }

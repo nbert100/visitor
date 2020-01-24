@@ -16,15 +16,17 @@ class Api::V1::PlacesController < ApplicationController
     def create
         place = Place.new(place_params)
         if place.save
-            render json: place, status: 201
-        # else 
-        #     render json: {errors: place.errors.full_messages}
+            render json: place, status: 200
+         else 
+            render json: { errors: place.errors.full_messages }
         end
-    end
+        # place = Place.create(place_params)
+        # render json: place, status: 200
+    end 
 
     private
     def set_place
-        @place = Place.find_by_id(params[:id])
+        place = Place.find_by_id(params[:id])
     end
 
     def place_params

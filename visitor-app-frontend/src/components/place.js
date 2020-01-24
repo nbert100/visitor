@@ -4,4 +4,9 @@ class Place {
         this.city = placeJSON.city
         this.country = placeJSON.country
     }
+
+    renderLi() {
+
+        return `<li>${this.city}, ${this.country}</li>`
+    }
 }

@@ -1075,3 +1075,1337 @@ Processing by Api::V1::PlacesController#index as */*
 Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 4.6ms)
 
 
+Started GET "/" for ::1 at 2020-01-24 09:53:04 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nbert100/.rvm/gems/ruby-2.6.4/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nbert100/.rvm/gems/ruby-2.6.4/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nbert100/.rvm/gems/ruby-2.6.4/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (51.2ms)
+Completed 200 OK in 243ms (Views: 159.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-01-24 09:53:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/users/1/visits" for ::1 at 2020-01-24 09:53:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users/1/visits"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/places/1/visits" for ::1 at 2020-01-24 09:53:28 -0500
+Processing by Api::V1::VisitsController#index as HTML
+  Parameters: {"place_id"=>"1"}
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/visits_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/visits_controller.rb:6
+Completed 200 OK in 834ms (Views: 280.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 09:53:40 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (7.8ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 54ms (Views: 39.6ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:00:42 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (1.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 70ms (Views: 59.3ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:04:41 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (2.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (6.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 89ms (Views: 71.0ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:13:37 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 50ms (Views: 42.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:13:47 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 63ms (Views: 54.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:14:02 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (8.5ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 42ms (Views: 26.6ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:18:55 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (2.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (2.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 82ms (Views: 70.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:22:31 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (2.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (17.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (12.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 126ms (Views: 74.3ms | ActiveRecord: 45.2ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:23:02 -0500
+  
+SyntaxError (/mnt/c/Users/nbert/dev/flatiron/projects/visitor-app/visitor-app-backend/app/controllers/api/v1/places_controller.rb:33: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/places_controller.rb:33: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:23:35 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (4.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 124ms (Views: 100.4ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:23:46 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (11.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (2.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 68ms (Views: 48.7ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:28:42 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (9.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (4.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 146ms (Views: 113.3ms | ActiveRecord: 25.5ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:31:31 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (9.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (3.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 76ms (Views: 54.6ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:39:05 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 101ms (Views: 81.3ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:39:17 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 40ms (Views: 31.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:40:31 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 88ms (Views: 68.3ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:40:37 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 57ms (Views: 48.3ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:41:28 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 89ms (Views: 75.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:41:32 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 46ms (Views: 38.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:41:40 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (5.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 54ms (Views: 39.6ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:41:50 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (5.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 54ms (Views: 41.9ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:42:15 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (3.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 44ms (Views: 34.3ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:42:31 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (2.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 105ms (Views: 88.1ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:42:37 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (1.7ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (2.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 60ms (Views: 47.9ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:43:13 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (1.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 79ms (Views: 63.1ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:43:21 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (1.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (3.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 59ms (Views: 44.9ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:51:50 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 123ms (Views: 96.4ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:51:58 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (8.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (5.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 76ms (Views: 52.2ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:53:45 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 50ms (Views: 43.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:56:25 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 45ms (Views: 37.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 10:58:20 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 92ms (Views: 74.8ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 11:03:03 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (1.5ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 50ms (Views: 40.7ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 11:04:26 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nbert100/.rvm/gems/ruby-2.6.4/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 106ms (Views: 87.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 11:06:50 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 33ms (Views: 24.4ms | ActiveRecord: 5.3ms)
+
+
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+Started GET "/api/v1/places" for ::1 at 2020-01-24 11:10:23 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 11:22:45 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 11:23:04 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 11:23:42 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (1.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (2.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 49ms (Views: 40.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-24 11:24:23 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+  [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+  ↳ app/controllers/api/v1/places_controller.rb:5
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 4.8ms)
+
+
