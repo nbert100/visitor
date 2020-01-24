@@ -20,8 +20,19 @@ class Places {
 
     createPlace(e) {
         e.preventDefault()
-        const value = this.newPlaceCity.value
-        this.adapter.createPlace(value)
+        // const city_value = this.newPlaceCity.value
+        // const country_value = this.newPlaceCountry.value
+        // this.adapter.createPlace(city_value, country_value)
+        const place = {
+            city: this.newPlaceCity.value,
+            country: this.newPlaceCountry.value
+        }
+        this.adapter.createPlace(place).then(place => {
+            this.places.push(new Place(place))
+            this.newPlaceCity.value = ""
+            this.newPlaceCountry.value = ""
+            this.render()
+        })
     }
 
     fetchAndLoadPlaces() {

@@ -9,16 +9,16 @@ class PlacesAdapter {
         )
     }
 
-    createPlace(city_value, country_value) {
-        const place = {
-            city: city_value,
-            country: country_value
-        }
+    createPlace(place) {
         return fetch(this.baseURL, {
-            method: 'POST'
-            city: JSON.stringify({ place: city })
-            country: JSON.stringify()
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                // "Accept": "application/json"
+            },
+            body: JSON.stringify({ place })
         })
+        .then(res => res.json())
     }
 }
 
