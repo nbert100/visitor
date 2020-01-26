@@ -15,16 +15,13 @@ class Api::V1::VisitsController < ApplicationController
         render json: visit
     end
 
-    # def new
-    # end
-
     def create
         place = Place.find_or_create_by(city: place_params[:city])
         visit = place.visits.build(visit_params)
         if visit.save
             render json: visit, include: :place, status: 201
-        else
-            render json: {errors: visit.errors.full_messages}
+         else
+             render json: {errors: visit.errors.full_messages}
         end
     end
 

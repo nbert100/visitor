@@ -12,10 +12,15 @@ class Places {
 
     initBindingsAndEventListeners() {
         this.placesContainer = document.getElementById("places-container")
+        this.body = document.querySelector("body")
         this.newPlaceCity = document.getElementById("new-city")
         this.newPlaceCountry = document.getElementById("new-country")
         this.placeForm = document.getElementById("new-place-form")
         this.placeForm.addEventListener("submit", this.createPlace.bind(this))
+        this.placesContainer.addEventListener("dblclick", this.handlePlaceClick.bind(this))
+        this.body.addEventListener("blur", this.updatePlace.bind(this), true) //if statement to trigger blur event only when intended (does event.target have a specific className??)
+        //event listener for form submit will be attached to placesContainer - data should be taken from event.target
+        //this.placesContainer.addEventListener("submit", this.handleVisitFormSubmit)
     }
 
     createPlace(e) {
@@ -35,9 +40,28 @@ class Places {
         })
     }
 
+    // createPlaceVisit(){
+
+    // }
+
+    handlePlaceClick(e) {
+        const li = e.target
+        li.contentEditable = true
+        li.focus()
+        li.classList.add("editable")
+    }
+
+    updatePlace(e) {
+        const li = e.target
+        li.contentEditable = false
+        li.classList.remove("editable")
+        console.log(e.target.dataset)
+        // const newValue = li.innerHTML
+        // this.adapter.updatePlace
+    }
+
     fetchAndLoadPlaces() {
-        this.adapter
-        .getPlaces()
+        this.adapter.getPlaces()
         .then(places => {
             places.forEach(place => this.places.push(new Place(place)))
             console.log(this.places)
@@ -48,6 +72,6 @@ class Places {
     }
 
     render() {    
-        this.placesContainer.innerHTML = this.places.map(place => place.renderLi()).join("")
+        this.placesContainer.innerHTML = this.places.map(place => place.renderPlace()).join("")
     }
 }

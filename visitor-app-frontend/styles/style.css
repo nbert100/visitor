@@ -7,3 +7,8 @@ body {
   p {
     color: red;
   }
+
+  .editable {
+    border: 5px solid black;
+    padding: 20px
+  }
