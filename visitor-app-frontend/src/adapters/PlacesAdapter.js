@@ -27,23 +27,23 @@ class PlacesAdapter {
         .then(res => res.json())
     }
 
-    updatePlace(cityValue, countryValue, id) {
-        const place = {
-            city: cityValue,
-            country: countryValue
-        }
+    // updatePlace(cityValue, countryValue, id) {
+    //     const place = {
+    //         city: cityValue,
+    //         country: countryValue
+    //     }
 
-        return fetch(`${this.baseURL}/id`, {
-            method: 'PATCH',
-            headers: {
-                "Content-Type": "application/json",
-                // "Accept": "application/json"
-            },
-            body: JSON.stringify({ place })
-        })
-        .then(res => res.json())
+    //     return fetch(`${this.baseURL}/id`, {
+    //         method: 'PATCH',
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             // "Accept": "application/json"
+    //         },
+    //         body: JSON.stringify({ place })
+    //     })
+    //     .then(res => res.json())
 
-    }
+    // }
 
 
 

@@ -24,7 +24,8 @@ class VisitsAdapter {
                 'content-type': 'application/json',
             },
             body: JSON.stringify({ newVisit }),
-        }).then(res => res.json())
+        })
+        .then(res => res.json())
     }
 
 }
