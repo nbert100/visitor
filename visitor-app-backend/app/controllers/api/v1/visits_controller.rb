@@ -1,20 +1,19 @@
 class Api::V1::VisitsController < ApplicationController
 
     def index
-        # if params[:place_id]
-        #     place = Place.find_by_id(params[:place_id])
-        #     render json: place.visits
-        # else
-        #     visits = Visit.all 
-        #     render json: visits, only: [:venue, :visitor]
-        # end
-        visits = Visit.all 
+        if params[:place_id]
+            visits = Place.find_by_id(params[:place_id]).visits
+            render json: place.visits
+        else
+            visits = Visit.all 
+            render json: visits, only: [:venue, :visitor, :when_visited, :comment]
+        end
         render json: visits, status: 200
     end
 
     def show
         set_visit
-        render json: visit
+        render json: visit, only: [:venue, :visitor, :when_visited, :comment]
     end
 
     def create
@@ -50,9 +49,9 @@ class Api::V1::VisitsController < ApplicationController
         visit = Visit.find_by_id(params[:id])
     end
 
-    # def place_params
-    #     params.require(:place).permit(:city, :country)
-    # end
+    def place_params
+        params.require(:place).permit(:city, :country)
+    end
 
     def visit_params
         params.require(:visit).permit(:venue, :visitor, :when_visited, :visited, :comment, :place_id)
