@@ -1,7 +1,4 @@
-// meat of program
-// set property of notes equal to empty array
-// create notes adapter
-//bind event listeners by invoking method
+
 class Places {
     constructor() {
         this.places = [];
@@ -11,9 +8,13 @@ class Places {
     }
 
     initBindingsAndEventListeners() {
-        this.placesContainer = document.getElementById("places-container")
+        this.placesContainer = document.getElementById("places-container");
         this.visitForm = document.getElementById("new-visit-form");
-        this.visitVenue = document.
+        this.visitVenue = document.getElementById("venue");
+        this.visitWhen = document.getElementById("when_visited");
+        this.visitVisitor = document.getElementById("visitor");
+        this.visitComment = document.getElementById("comment");
+        this.placesContainer.addEventListener("click", this.handlePlaceSingleClick)
         // this.body = document.querySelector("body")
         // this.newPlaceCity = document.getElementById("new-city")
         // this.newPlaceCountry = document.getElementById("new-country")
@@ -25,40 +26,31 @@ class Places {
         //this.placesContainer.addEventListener("submit", this.handleVisitFormSubmit)
     }
 
-    createPlace(e) {
-        e.preventDefault()
-        const place = {
-            city: this.newPlaceCity.value,
-            country: this.newPlaceCountry.value
-        }
+    // createPlace(e) {
+    //     e.preventDefault()
+    //     const place = {
+    //         city: this.newPlaceCity.value,
+    //         country: this.newPlaceCountry.value
+    //     }
 
-        this.adapter.createPlace(place).then(place => {
-            this.places.push(new Place(place))
-            this.newPlaceCity.value = ""
-            this.newPlaceCountry.value = ""
-            this.render()
-        })
-    }
+    //     this.adapter.createPlace(place).then(place => {
+    //         this.places.push(new Place(place))
+    //         this.newPlaceCity.value = ""
+    //         this.newPlaceCountry.value = ""
+    //         this.render()
+    //     })
+    // }
 
     // createPlaceVisit(){
 
     // }
 
-    // handlePlaceClick(e) {
-    //     const li = e.target
-    //     li.contentEditable = true
-    //     li.focus()
-    //     li.classList.add("editable")
-    // }
-
-    // updatePlace(e) {
-    //     const li = e.target
-    //     li.contentEditable = false
-    //     li.classList.remove("editable")
-    //     console.log(e.target.dataset)
-    //     // const newValue = li.innerHTML
-    //     // this.adapter.updatePlace
-    // }
+    handlePlaceSingleClick(e) {
+        const li = e.target
+        console.log("clicked")
+        // show visits list
+       
+    }
 
     fetchAndLoadPlaces() {
         this.adapter.getPlaces()
