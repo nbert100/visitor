@@ -9,12 +9,20 @@ class Places {
 
     initBindingsAndEventListeners() {
         this.placesContainer = document.getElementById("places-container");
-        this.visitForm = document.getElementById("new-visit-form");
         this.visitVenue = document.getElementById("venue");
         this.visitWhen = document.getElementById("when_visited");
         this.visitVisitor = document.getElementById("visitor");
         this.visitComment = document.getElementById("comment");
-        this.placesContainer.addEventListener("click", this.handlePlaceSingleClick)
+        this.visitForm = document.getElementById("new-visit-form");
+        this.visitForm.addEventListener("submit", this.createPlaceVisit.bind(this))
+        this.placesContainer.addEventListener("click", event => {
+            this.handlePlaceSingleClick)
+        //     this.placeId = event.target.dataset.id;
+        //     this.selectPlace(this.placeId);
+        //     this.fetchAndLoadVisits(this.placeId);
+        // )}
+        //this.visitForm.addEventListener("submit", this.createPlaceVisit.bind(this))
+        //}
         // this.body = document.querySelector("body")
         // this.newPlaceCity = document.getElementById("new-city")
         // this.newPlaceCountry = document.getElementById("new-country")
@@ -41,14 +49,27 @@ class Places {
     //     })
     // }
 
-    // createPlaceVisit(){
+    createPlaceVisit(e){
+        e.preventDefault()
+        const visit = {
+            venue: this.visitVenue.value,
+            visitor: this.visitVisitor.value,
+            when_visited: this.visitWhen.value,
+            comment: this.comment.value
 
-    // }
+        }
+        this.adapter.createVisit(visit)
+        .then(visit => {
+            this.visit.push(new Visit(visit))
+            this.render()
+        })
+
+     }
 
     handlePlaceSingleClick(e) {
         const li = e.target
-        console.log("clicked")
-        // show visits list
+        console.log(li.id)
+        
        
     }
 

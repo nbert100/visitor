@@ -4,13 +4,13 @@ class Place {
         this.city = placeJSON.city
         this.country = placeJSON.country
         this.visits = placeJSON.visits
-        // this.visits = []
+        
     }
 
     
     renderPlaceVisits(){
         const visitsContainer = document.getElementById("visit-container")
-        return this.visits.map(visit => `<ul>${visit.venue} with ${visit.visitor}</ul>`).join("")
+        return this.visits.map(visit => `<ul class="visit">${visit.venue} with ${visit.visitor}</ul>`).join("")
         //  return `
         // <ul>
         //     ${this.visits.map(visit => {
@@ -20,9 +20,16 @@ class Place {
         // `   
         }
         
-    
+    renderVisitButton(){
+        return `<button class="visit-button" id="index_visit_${this.id}"> See Visits</button>`
+    }
+
+    handleButtonClick() {
+        
+    }
 
     renderNewPlaceVisitForm(){
+        //place.id === this.id
         return `
         <form data-id=${this.id} id="new-visit-form"> <div id="new-visit-container">
         <form id="new-visit-form">
@@ -47,13 +54,13 @@ class Place {
 
     renderPlaceHeader() {
 
-        return `<h3>${this.city}, ${this.country}</h3>`
+        return `<h4 data-id=${this.id} data-city=${this.city} data-country=${this.country}>${this.city}, ${this.country}</h3>`
     }
 
     renderPlace(){
         return `
             ${this.renderPlaceHeader()}
-           ${this.renderPlaceVisits()}            
+                     
         `
     }
 }

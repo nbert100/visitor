@@ -24,14 +24,14 @@ class PlacesAdapter {
         .then(res => res.json());
     }
 
-    createVisit(venueValue, dateValue, commentValue, visitorValue, placeValue) {
-        const visit = {
-            venue: venueValue,
-            when_visited: dateValue,
-            comment: commentValue,
-            visitor: visitorValue,
-            place_id: placeValue
-        }
+    createVisit(visit) {
+        // const visit = {
+        //     venue: venueValue,
+        //     when_visited: dateValue,
+        //     comment: commentValue,
+        //     visitor: visitorValue,
+        //     place_id: placeValue
+        // }
             //visited?
         return fetch(this.baseURL + "/visits", {
             method: "POST",

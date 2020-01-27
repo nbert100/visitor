@@ -3,12 +3,11 @@ class Api::V1::VisitsController < ApplicationController
     def index
         if params[:place_id]
             visits = Place.find_by_id(params[:place_id]).visits
-            render json: place.visits
         else
             visits = Visit.all 
-            render json: visits, only: [:venue, :visitor, :when_visited, :comment]
+            #render json: visits, 
         end
-        render json: visits, status: 200
+         render json: visits, only: [:venue, :when_visited], include: :place, status: 200
     end
 
     def show
@@ -17,24 +16,11 @@ class Api::V1::VisitsController < ApplicationController
     end
 
     def create
-        # place = Place.find_or_create_by(city: place_params[:city])
         visit = place.visits.build(visit_params)
         if visit.save
             render json: visit, include: :place, status: 200
-        #  else
-        #      render json: {errors: visit.errors.full_messages}
         end
     end
-
-    # def update
-    #     set_visit
-    #     if visit.update(visit_params)
-    #         render json: visit
-    #         #flash message
-    #     else
-    #         render json: { errors: visit.errors.full_messages }
-    #     end
-    # end
 
     def destroy
         set_visit
