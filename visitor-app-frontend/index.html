@@ -5,11 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="styles/style.css">
+
+
         <title>Visitor App</title>
     </head>
     <body>
         <div class="container">
-            <h2>New Place</h2>
+            <h2 class="center">Places</h2>
+          <br>
+          <br>
+          <h3>Create Visit</h3>
             <div id="new-place-container">
               <form id="new-place-form">
               <label for="city">City:</label>
@@ -28,10 +33,13 @@
         </div>
         </div>
         
+
+        <script type="text/javascript" src="src/components/visit.js"></script>
         <script type="text/javascript" src="src/components/place.js"></script>
         <script src="src/components/places.js"></script>
         <script src="src/components/app.js"></script>
         <script src="src/adapters/PlacesAdapter.js"></script>
+        <script src="src/adapters/VisitsAdapter.js"></script>
         <script src="src/index.js"></script>
         
     </body>
