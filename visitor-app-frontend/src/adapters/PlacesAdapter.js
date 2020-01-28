@@ -1,26 +1,25 @@
 // only job is to communicate with api/backends
 class PlacesAdapter {
     constructor() {
-        this.baseURL = "http://localhost:3000/api/v1"
+        this.baseUrl = "http://localhost:3000/api/v1/"
     }
 
     getPlaces() {
-        return fetch(this.baseURL + "/places")
-        .then(res => res.json());
+        return fetch(this.baseUrl + 'places').then(res => res.json())
     }
 
     getPlace(id) {
-        return fetch(this.baseURL + "/places/" + id)
+        return fetch(this.baseUrl + "places/" + id)
         .then(res => res.json());
     }
 
     getVisits() {
-        return fetch(this.baseURL + "/visits")
+        return fetch(this.baseUrl + "visits")
         .then(res => res.json());
     }
 
     getPlaceVisits(id) {
-        return fetch(this.baseURL + "/places/" + id + "/visits")
+        return fetch(this.baseUrl + "/places/" + id + "/visits")
         .then(res => res.json());
     }
 
@@ -33,12 +32,12 @@ class PlacesAdapter {
         //     place_id: placeValue
         // }
             //visited?
-        return fetch(this.baseURL + "/visits", {
+        return fetch(this.baseUrl + "visits", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify({ visit })
+            body: JSON.stringify({ visit }),
         }).then(res => res.json());
     }
 

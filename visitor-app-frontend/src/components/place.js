@@ -54,10 +54,10 @@ class Place {
 
     renderPlaceHeader() {
 
-        return `<h4 data-id=${this.id} data-city=${this.city} data-country=${this.country}>${this.city}, ${this.country}</h3>`
+        return `<h4 data-place-id=${this.id}>${this.city}, ${this.country}</h4>`
     }
 
-    renderPlace(){
+    renderPlace() {
         return `
             ${this.renderPlaceHeader()}
                      

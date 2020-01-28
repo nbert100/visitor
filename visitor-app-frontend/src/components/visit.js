@@ -5,7 +5,7 @@ class Visit {
         this.whenVisited = visitJSON.when_visited
         this.comment = visitJSON.comment
         this.visitor = visitJSON.visitor 
-        this.place_id = visitJSON.place_id
+        this.placeId = visitJSON.place_id
         //this.visited = visitJSON.visited
     }
 
