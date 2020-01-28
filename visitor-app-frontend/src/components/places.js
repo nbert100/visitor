@@ -1,22 +1,24 @@
 
-// class Places {
-//     constructor() {
-//         this.places = []
-//         this.adapter = new PlacesAdapter()
-//         // this.initBindingsAndEventListeners()
-//         // this.fetchAndLoadPlaces()
-//         console.log("hello")
-//     }
+class Places {
+    constructor() {
+        this.places = []
+        this.placeAdapter = new PlacesAdapter()
+        this.visitAdapter = new VisitsAdapter()
+        this.initBindingsAndEventListeners()
+        this.fetchAndLoadPlaces()
+        console.log("hello")
+    }
 
-//     //  initBindingsAndEventListeners() {
-//     //      this.placesContainer = document.getElementById("places-container");
+       initBindingsAndEventListeners() {
+        this.placesContainer = document.getElementById("places-container");
+        this.addEventListener("click", this.handlePlaceSingleClick(e))
 //     //     // this.visitVenue = document.getElementById("venue");
 //     //     // this.visitWhen = document.getElementById("when_visited");
 //     //     // this.visitVisitor = document.getElementById("visitor");
 //     //     // this.visitComment = document.getElementById("comment");
 //     //     // this.visitForm = document.getElementById("new-visit-form");
 //     //     // this.visitForm.addEventListener("submit", this.createPlaceVisit.bind(this))
-//     // }
+             }
 //     // createPlaceVisit(e) {
 //     //     e.preventDefault()
 //     //     const visit = {
@@ -34,22 +36,24 @@
 
 //     //  }
 
-//     // handlePlaceSingleClick(e) {
-//     //     const li = e.target
-//     //     console.log(li.id)
-        
+    handlePlaceSingleClick(e) {
+        const li = e.target
+        console.log("clicked")
        
-//     // }
+    }
 
-//     fetchAndLoadPlaces() {
-//         this.adapter.getPlaces()
-//         .then(places => {
-//             places.forEach(place => this.places.push(new Place(place)))
-//         })
-//         .then(() => { this.render() })
-//     }
+    fetchAndLoadPlaces() {
+        this.adapter.getPlaces()
+        .then(places => {
+            places.forEach(place => this.places.push(new Place(place)))
+        })
+        .then(() => {
+             this.render() 
+            })
+            
+    }
 
-//     render() {    
-//         this.placesContainer.innerHTML = this.places.map(place => place.renderPlace()).join("")
-//     }
-// }
+    render() {    
+        this.placesContainer.innerHTML = this.places.map(place => place.renderPlace()).join("")
+    }
+ }
