@@ -3,15 +3,16 @@ class Places {
     constructor() {
         this.places = []
         this.placeAdapter = new PlacesAdapter()
-        this.visitAdapter = new VisitsAdapter()
+        // this.visitAdapter = new VisitsAdapter()
         this.initBindingsAndEventListeners()
         this.fetchAndLoadPlaces()
         console.log("hello")
     }
 
        initBindingsAndEventListeners() {
-        this.placesContainer = document.getElementById("places-container");
-        this.addEventListener("click", this.handlePlaceSingleClick(e))
+        this.placesContainer = document.getElementById("places-container")
+        this.placesContainer.addEventListener('click', this.handleSeeVisitsButton)
+        // this.addEventListener("click", this.handlePlaceSingleClick())
 //     //     // this.visitVenue = document.getElementById("venue");
 //     //     // this.visitWhen = document.getElementById("when_visited");
 //     //     // this.visitVisitor = document.getElementById("visitor");
@@ -36,14 +37,14 @@ class Places {
 
 //     //  }
 
-    handlePlaceSingleClick(e) {
+    handleSeeVisitsButton(e) {
         const li = e.target
         console.log("clicked")
        
     }
 
     fetchAndLoadPlaces() {
-        this.adapter.getPlaces()
+        this.placeAdapter.getPlaces()
         .then(places => {
             places.forEach(place => this.places.push(new Place(place)))
         })

@@ -9,19 +9,23 @@ class Place {
 
     
     renderPlaceVisits(){
-        const visitsContainer = document.getElementById("visit-container")
-        return this.visits.map(visit => `<ul class="visit">${visit.venue} with ${visit.visitor}</ul>`).join("")
-        //  return `
-        // <ul>
-        //     ${this.visits.map(visit => {
-        //         return `<li>${visit.venue}</li>`
-        //     }).join("")}
-        // </ul>
-        // `   
+        // const visitsContainer = document.getElementById("visit-container")
+        // return this.visits.map(visit => `<ul class="visit">${visit.venue} with ${visit.visitor}</ul>`).join("")
+         return `
+        <ul>
+            ${this.visits.map(visit => {
+                return `<li>${visit.venue}</li>`
+            }).join("")}
+        </ul>
+        `   
         }
         
     renderVisitButton(){
-        return `<button class="visit-button" id="index_visit_${this.id}"> See Visits</button>`
+        return `<button class="index-visit-button" id="index_visit_${this.id}"> See Visits</button>`
+    }
+
+    renderNewVisitButton() {
+        return `<button class="new-visit-button" id="new-visit-${this.id}"> New Visit</button>`
     }
 
     handleButtonClick() {
@@ -54,13 +58,17 @@ class Place {
 
     renderPlaceHeader() {
 
-        return `<h4 data-place-id=${this.id}>${this.city}, ${this.country}</h4>`
+        return `<h4 data-place-id=${this.id}>${this.city}, ${this.country} ${this.renderVisitButton()}</h4>`
     }
+
+
 
     renderPlace() {
         return `
+        <div id="place-${this.id}">
             ${this.renderPlaceHeader()}
-                     
+            
+        </div>             
         `
     }
 }
