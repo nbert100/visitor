@@ -14,7 +14,7 @@ class Places {
         this.newCity = document.getElementById("new-city")
         this.newCountry = document.getElementById("new-country")
         this.placeForm = document.getElementById("new-place-form")
-        this.placeForm.addEventListener('click', this.createPlace.bind(this))
+        this.placeForm.addEventListener("submit", this.createPlace.bind(this))
         // this.addEventListener("click", this.handlePlaceSingleClick())
 //     //     // this.visitVenue = document.getElementById("venue");
 //     //     // this.visitWhen = document.getElementById("when_visited");
@@ -32,9 +32,9 @@ class Places {
                      country: this.newCountry.value
                  }
 
-                 this.placeAdapter.createPlace(city, country)
+                 this.placeAdapter.createPlace(place)
                  .then(place => {
-                     this.places.push(new Place(place))
+                     this.places.unshift(new Place(place))
                      this.render()
                  })
              }

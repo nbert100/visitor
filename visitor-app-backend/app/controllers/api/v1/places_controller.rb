@@ -1,5 +1,10 @@
 class Api::V1::PlacesController < ApplicationController
 
+    def create
+        place = Place.create(place_params)
+        render json: place, include: :visits
+    end
+    
     def index
         places = Place.all 
         render json: places, include: :visits, status: 200
