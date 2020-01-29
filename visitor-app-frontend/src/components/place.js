@@ -9,56 +9,52 @@ class Place {
 
     
     renderPlaceVisits(){
-        // const visitsContainer = document.getElementById("visit-container")
-        // return this.visits.map(visit => `<ul class="visit">${visit.venue} with ${visit.visitor}</ul>`).join("")
-         return `
-        <ul>
-            ${this.visits.map(visit => {
+        // const visitContainer = document.getElementById("visits-container")
+        // const ul 
+         return `<ul>${this.visits.map(visit => {
                 return `<li>${visit.venue}</li>`
             }).join("")}
         </ul>
+       
         `   
+        
         }
         
-    renderVisitButton(){
-        return `<button class="index-visit-button" id="index_visit_${this.id}"> See Visits</button>`
+    renderVisitButton() {
+        return `<button type="button" class="index-visit-button" id="index_visit_${this.id}"> See Visits</button>`
     }
 
     renderNewVisitButton() {
-        return `<button class="new-visit-button" id="new-visit-${this.id}"> New Visit</button>`
+        return `<button type="button" class="new-visit-button" id="new_visit_${this.id}"> New Visit </button>`
     }
 
-    handleButtonClick() {
+    // handleButtonClick() {
         
-    }
+    // }
 
-    renderNewPlaceVisitForm(){
-        //place.id === this.id
-        return `
-        <form data-id=${this.id} id="new-visit-form"> <div id="new-visit-container">
-        <form id="new-visit-form">
-          <input type="hidden" id="visit-id">
-        <label for="venue">Venue:</label>
-        <input type="text" name="venue" id="venue">
+    static renderNewPlaceVisitForm() {
+        const formContainer = document.getElementById(`place-${placeId}`)
+        const form = document.createElement("form")
+        form.setAttribute('data-place-id', placeId)
+        form.innerHTML = `
+        Venue: <input type="text" name="venue" id="venue">
         <br>
-        <label for="city">Travel Buddy:</label>
-        <input type="text" name="visitor" id="visitor">
+        Travel Buddy: <input type="text" name="visitor" id="visitor">
         <br>
-        <label for="when_visited">When:</label>
-        <input type="date" name="when_visited" id="when_visited">
+        When: <input type="date" name="when_visited" id="when_visited">
         <br>
-        <label for="comment">Comment:</label>
-        <input type="text" name="comment" id="comment">
+        Comment: <input type="text" name="comment" id="comment">
         <br>
         <input type="submit" value="Add Visit">
         </form>  
         `
+        formContainer.appendChild(form)
     }
 
 
     renderPlaceHeader() {
 
-        return `<h4 data-place-id=${this.id}>${this.city}, ${this.country} ${this.renderVisitButton()}</h4>`
+        return `<h4 data-place-id=${this.id}>${this.city}, ${this.country} ${this.renderVisitButton()} </h4>`
     }
 
 
@@ -67,6 +63,7 @@ class Place {
         return `
         <div id="place-${this.id}">
             ${this.renderPlaceHeader()}
+            <div id="visit-container-place-${this.id}> ${this.renderNewVisitButton()}</div>
             
         </div>             
         `

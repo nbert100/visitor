@@ -3,7 +3,7 @@ class Places {
     constructor() {
         this.places = []
         this.placeAdapter = new PlacesAdapter()
-        // this.visitAdapter = new VisitsAdapter()
+        this.visitAdapter = new VisitsAdapter()
         this.initBindingsAndEventListeners()
         this.fetchAndLoadPlaces()
         console.log("hello")
@@ -11,7 +11,10 @@ class Places {
 
        initBindingsAndEventListeners() {
         this.placesContainer = document.getElementById("places-container")
-        this.placesContainer.addEventListener('click', this.handleSeeVisitsButton)
+        this.newCity = document.getElementById("new-city")
+        this.newCountry = document.getElementById("new-country")
+        this.placeForm = document.getElementById("new-place-form")
+        this.placeForm.addEventListener('click', this.createPlace.bind(this))
         // this.addEventListener("click", this.handlePlaceSingleClick())
 //     //     // this.visitVenue = document.getElementById("venue");
 //     //     // this.visitWhen = document.getElementById("when_visited");
@@ -20,6 +23,23 @@ class Places {
 //     //     // this.visitForm = document.getElementById("new-visit-form");
 //     //     // this.visitForm.addEventListener("submit", this.createPlaceVisit.bind(this))
              }
+
+
+             createPlace(e) {
+                e.preventDefault()
+                 const place = {
+                     city: this.newCity.value,
+                     country: this.newCountry.value
+                 }
+
+                 this.placeAdapter.createPlace(city, country)
+                 .then(place => {
+                     this.places.push(new Place(place))
+                     this.render()
+                 })
+             }
+
+            
 //     // createPlaceVisit(e) {
 //     //     e.preventDefault()
 //     //     const visit = {
@@ -37,9 +57,15 @@ class Places {
 
 //     //  }
 
+
     handleSeeVisitsButton(e) {
-        const li = e.target
-        console.log("clicked")
+        if (e.target.className === "index-visit-button"){
+          const bu = e.target.id
+          const placeId = bu.split("_")[2]
+          Place.renderPlaceVisits
+        console.log("clicked")  
+        }
+        
        
     }
 

@@ -8,14 +8,14 @@ class VisitsAdapter {
         .then(res => res.json());
     }
 
-    createVisit(visit) {
-        return fetch(this.baseUrl + "visits", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify({ visit }),
-        }).then(res => res.json());
-    }
+    // createVisit(visit) {
+    //     return fetch(this.baseUrl, {
+    //         method: "POST",
+    //         headers: {
+    //             "content-type": "application/json"
+    //         },
+    //         body: JSON.stringify({ visit }),
+    //     }).then(res => res.json());
+    // }
     
 }
