@@ -11,10 +11,10 @@ class Place {
     renderPlaceVisits(){
         // const visitContainer = document.getElementById("visits-container")
         // const ul 
-         return `<ul>${this.visits.map(visit => {
+         return `<div id="myVisits">${this.visits.map(visit => {
                 return `<li>${visit.venue}</li>`
             }).join("")}
-        </ul>
+        </div>
        
         `   
         
@@ -54,7 +54,10 @@ class Place {
 
     renderPlaceHeader() {
 
-        return `<h4 data-place-id=${this.id}>${this.city}, ${this.country} ${this.renderVisitButton()} </h4>`
+        return `<h4 data-place-id=${this.id}>
+        ${this.city}, ${this.country} ${this.renderVisitButton()} 
+        </h4>
+        `
     }
 
 
