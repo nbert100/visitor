@@ -14,15 +14,15 @@ class Places {
         this.newCity = document.getElementById("new-city")
         this.newCountry = document.getElementById("new-country")
         this.placeForm = document.getElementById("new-place-form")
-        this.visitDiv = document.getElementById("visits-container")
-
+        this.visitVenue = document.getElementById("venue");
+        this.visitWhen = document.getElementById("when_visited");
+        this.visitVisitor = document.getElementById("visitor");
+        this.visitComment = document.getElementById("comment");
         this.placeForm.addEventListener("submit", this.createPlace.bind(this))
         this.placesContainer.addEventListener("click", this.handleSeeVisitsButtonClick.bind(this))
         this.placesContainer.addEventListener("click", this.handleAddVisitButton.bind(this))
-//     //     // this.visitVenue = document.getElementById("venue");
-//     //     // this.visitWhen = document.getElementById("when_visited");
-//     //     // this.visitVisitor = document.getElementById("visitor");
-//     //     // this.visitComment = document.getElementById("comment");
+        this.placesContainer.addEventListener("submit", this.createPlaceVisit.bind(this))
+    
 //     //     // this.visitForm = document.getElementById("new-visit-form");
 //     //     // this.visitForm.addEventListener("submit", this.createPlaceVisit.bind(this))
              }
@@ -42,23 +42,25 @@ class Places {
             }
 
             
-//     // createPlaceVisit(e) {
-//     //     e.preventDefault()
-//     //     const visit = {
-//     //         venue: this.visitVenue.value,
-//     //         visitor: this.visitVisitor.value,
-//     //         when_visited: this.visitWhen.value,
-//     //         comment: this.comment.value
+        createPlaceVisit(e) {
+            e.preventDefault()
+            debugger
+            const visit = {
+                venue: this.visitVenue.value,
+                visitor: this.visitVisitor.value,
+                when_visited: this.visitWhen.value,
+                comment: this.comment.value
 
-//     //     }
-//     //     this.adapter.createVisit(visit)
-//     //     .then(visit => {
-//     //         this.visit.push(new Visit(visit))
-//     //         this.render()
-//     //     })
+            }
+            this.visitAdapter.createVisit(visit)
+            .then(visit => {
+                const place = this.places.find(place => place.id === visit.place.id)
+                place.visits.push(visit)
+                this.render()
+            })
 
-//     //  }
-
+        }
+            // My visits are getting lost
 
     handleSeeVisitsButtonClick(e) {
         if (e.target.className === "index-visit-button"){

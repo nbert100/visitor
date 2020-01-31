@@ -27,7 +27,7 @@ class Place {
 
     renderNewPlaceVisitForm(placeId) {
         const visitFormContainer = document.getElementById(`place-${placeId}`)
-        const visitForm = document.createElement("form")
+        const visitForm = document.createElement("visit-form")
         visitForm.setAttribute('data-place-id', placeId)
         visitForm.innerHTML = `
         Venue: <input type="text" name="venue" id="venue">
