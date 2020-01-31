@@ -18,6 +18,7 @@ class Places {
 
         this.placeForm.addEventListener("submit", this.createPlace.bind(this))
         this.placesContainer.addEventListener("click", this.handleSeeVisitsButtonClick.bind(this))
+        this.placesContainer.addEventListener("click", this.handleAddVisitButton.bind(this))
 //     //     // this.visitVenue = document.getElementById("venue");
 //     //     // this.visitWhen = document.getElementById("when_visited");
 //     //     // this.visitVisitor = document.getElementById("visitor");
@@ -60,23 +61,22 @@ class Places {
 
 
     handleSeeVisitsButtonClick(e) {
-        
-        if (this.visitDiv.style.display ==="none") {
-            
-            this.visitDiv.style.display ="block";
-        } else {
-            this.visitDiv.style.display = "none";
+        if (e.target.className === "index-visit-button"){
+            console.log(e.target.className)
+          const bu = e.target.id
+          const placeId = bu.split("_")[2]
+            this.places[placeId].renderPlaceVisits()         
         }
-        // if (e.target.className === "index-visit-button"){
-        //     console.log(e.target.className)
-        //   const bu = e.target.id
-        //   const placeId = bu.split("_")[2]
-        //   this.places[placeId].renderPlaceVisits()
-          
-        // }
-        
-       
-     }
+    }
+
+    handleAddVisitButton(e) {
+        console.log(e.target.className)
+        if (e.target.className === "new-visit-button"){
+          const bu = e.target.id
+          const placeId = bu.split("_")[2]
+          this.places[placeId].renderNewPlaceVisitForm(placeId);
+        }
+    }
 
     fetchAndLoadPlaces() {
         this.placeAdapter.getPlaces()

@@ -9,16 +9,13 @@ class Place {
 
     
     renderPlaceVisits(){
-        // const visitContainer = document.getElementById("visits-container")
-        // const ul 
-         return `<div id="myVisits">${this.visits.map(visit => {
-                return `<li>${visit.venue}</li>`
-            }).join("")}
-        </div>
-       
-        `   
-        
-        }
+         return `<ul>${this.visits.map(visit => {
+                return `
+                <li>${visit.venue}</li>
+                `
+            }).join("")}</ul>
+           `   
+         }
         
     renderVisitButton() {
         return `<button type="button" class="index-visit-button" id="index_visit_${this.id}"> See Visits</button>`
@@ -28,15 +25,11 @@ class Place {
         return `<button type="button" class="new-visit-button" id="new_visit_${this.id}"> New Visit </button>`
     }
 
-    // handleButtonClick() {
-        
-    // }
-
-    static renderNewPlaceVisitForm() {
-        const formContainer = document.getElementById(`place-${placeId}`)
-        const form = document.createElement("form")
-        form.setAttribute('data-place-id', placeId)
-        form.innerHTML = `
+    renderNewPlaceVisitForm(placeId) {
+        const visitFormContainer = document.getElementById(`place-${placeId}`)
+        const visitForm = document.createElement("form")
+        visitForm.setAttribute('data-place-id', placeId)
+        visitForm.innerHTML = `
         Venue: <input type="text" name="venue" id="venue">
         <br>
         Travel Buddy: <input type="text" name="visitor" id="visitor">
@@ -48,13 +41,13 @@ class Place {
         <input type="submit" value="Add Visit">
         </form>  
         `
-        formContainer.appendChild(form)
+        visitFormContainer.appendChild(visitForm)
     }
 
 
     renderPlaceHeader() {
-
-        return `<h4 data-place-id=${this.id}>
+        return `
+        <h4 data-id=${this.id} data-class="place-header">
         ${this.city}, ${this.country} ${this.renderVisitButton()} 
         </h4>
         `
@@ -66,11 +59,8 @@ class Place {
         return `
         <div id="place-${this.id}">
             ${this.renderPlaceHeader()}
-            
-            <div id="visit-container-place-${this.id}">
-            ${this.renderPlaceVisits()}
-                ${this.renderNewVisitButton()}
-            </div>            
+            ${this.renderNewVisitButton()}
+                        
         </div>             
         `
     }
