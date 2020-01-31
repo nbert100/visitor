@@ -66,7 +66,9 @@ class Place {
         return `
         <div id="place-${this.id}">
             ${this.renderPlaceHeader()}
+            
             <div id="visit-container-place-${this.id}">
+            ${this.renderPlaceVisits()}
                 ${this.renderNewVisitButton()}
             </div>            
         </div>             
