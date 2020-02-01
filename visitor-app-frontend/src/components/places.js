@@ -45,10 +45,10 @@ class Places {
         createPlaceVisit(e) {
             e.preventDefault()
                 const visit = {
-                venue: this.visitVenue.value,
-                visitor: this.visitVisitor.value,
-                when_visited: this.visitWhen.value,
-                comment: this.comment.value,
+                venue: e.target.querySelector("#venue").value,
+                visitor: e.target.querySelector("#visitor").value,
+                when_visited: e.target.querySelector("#when_visited").value,
+                comment: e.target.querySelector("#comment").value,
                 place_id: e.target.getAttribute("data-place-id")
             }
             this.visitAdapter.createVisit(visit)
@@ -59,7 +59,7 @@ class Places {
             })
 
         }
-            // My visits are getting lost
+           
 
     handleSeeVisitsButton(e) {
         if (e.target.className === "index-visit-button") {
