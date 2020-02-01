@@ -8,17 +8,6 @@ class PlacesAdapter {
         return fetch(this.baseUrl).then(res => res.json())
     }
 
-    // getPlace(id) {
-    //     return fetch(this.baseUrl + id)
-    //     .then(res => res.json());
-    // }
-   
-
-    // getPlaceVisits(id) {
-    //     return fetch(this.baseUrl + id + "/visits")
-    //     .then(res => res.json());
-    // }
-
     createPlace(place) {
         
         return fetch(this.baseUrl, {

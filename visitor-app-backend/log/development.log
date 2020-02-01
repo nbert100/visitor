@@ -18319,3 +18319,462 @@ Processing by Api::V1::VisitsController#create as */*
 Completed 200 OK in 137ms (Views: 71.4ms | ActiveRecord: 46.6ms)
 
 
+Started GET "/api/v1/places" for ::1 at 2020-01-31 23:14:53 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:10
+No serializer found for resource: #<Place id: 1, city: "Paris", country: "France", created_at: "2020-01-23 03:56:25", updated_at: "2020-01-23 03:56:25">
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (2.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Place::ActiveRecord_Relation (67.5ms)
+Completed 200 OK in 73ms (Views: 58.0ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-31 23:18:01 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:10
+No serializer found for resource: #<Place id: 1, city: "Paris", country: "France", created_at: "2020-01-23 03:56:25", updated_at: "2020-01-23 03:56:25">
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (4.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Place::ActiveRecord_Relation (86.35ms)
+Completed 200 OK in 90ms (Views: 73.0ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-31 23:22:10 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:10
+No serializer found for resource: #<Place id: 1, city: "Paris", country: "France", created_at: "2020-01-23 03:56:25", updated_at: "2020-01-23 03:56:25">
+[active_model_serializers]   [1m[36mVisit Load (2.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (3.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Place::ActiveRecord_Relation (108.7ms)
+Completed 200 OK in 113ms (Views: 88.7ms | ActiveRecord: 23.7ms)
+
+
+Started POST "/api/v1/places" for ::1 at 2020-01-31 23:24:41 -0500
+Processing by Api::V1::PlacesController#create as */*
+  Parameters: {"place"=>{"city"=>"Spokane", "country"=>"USA"}}
+  [1m[35m (1.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[36mPlace Create (34.7ms)[0m  [1m[32mINSERT INTO "places" ("city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["city", "Spokane"], ["country", "USA"], ["created_at", "2020-02-01 04:24:41.534214"], ["updated_at", "2020-02-01 04:24:41.534214"]]
+  ↳ app/controllers/api/v1/places_controller.rb:4
+  [1m[35m (177.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/places_controller.rb:4
+[active_model_serializers]   [1m[36mVisit Load (1.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Place (9.35ms)
+Completed 200 OK in 239ms (Views: 10.8ms | ActiveRecord: 214.9ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-31 23:33:12 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:10
+No serializer found for resource: #<Place id: 1, city: "Paris", country: "France", created_at: "2020-01-23 03:56:25", updated_at: "2020-01-23 03:56:25">
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Place::ActiveRecord_Relation (100.31ms)
+Completed 200 OK in 104ms (Views: 87.2ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-31 23:36:10 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:10
+No serializer found for resource: #<Place id: 1, city: "Paris", country: "France", created_at: "2020-01-23 03:56:25", updated_at: "2020-01-23 03:56:25">
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (2.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (2.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (2.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (5.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Place::ActiveRecord_Relation (104.71ms)
+Completed 200 OK in 112ms (Views: 80.3ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/api/v1/places" for ::1 at 2020-01-31 23:42:02 -0500
+Processing by Api::V1::PlacesController#index as */*
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  ↳ app/controllers/api/v1/places_controller.rb:10
+No serializer found for resource: #<Place id: 1, city: "Paris", country: "France", created_at: "2020-01-23 03:56:25", updated_at: "2020-01-23 03:56:25">
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.1ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.8ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (4.2ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.9ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (2.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.7ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers]   [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."place_id" = ?[0m  [["place_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/places_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Place::ActiveRecord_Relation (127.79ms)
+Completed 200 OK in 218ms (Views: 185.2ms | ActiveRecord: 28.3ms)
+
+

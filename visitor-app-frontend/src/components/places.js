@@ -6,7 +6,6 @@ class Places {
         this.visitAdapter = new VisitsAdapter()
         this.initBindingsAndEventListeners()
         this.fetchAndLoadPlaces()
-        
     }
 
        initBindingsAndEventListeners() {
@@ -14,19 +13,11 @@ class Places {
         this.newCity = document.getElementById("new-city")
         this.newCountry = document.getElementById("new-country")
         this.placeForm = document.getElementById("new-place-form")
-        this.visitVenue = document.getElementById("venue");
-        this.visitWhen = document.getElementById("when_visited");
-        this.visitVisitor = document.getElementById("visitor");
-        this.visitComment = document.getElementById("comment");
         this.placeForm.addEventListener("submit", this.createPlace.bind(this))
         this.placesContainer.addEventListener("click", this.handleSeeVisitsButton.bind(this))
         this.placesContainer.addEventListener("click", this.handleAddVisitButton.bind(this))
         this.placesContainer.addEventListener("submit", this.createPlaceVisit.bind(this))
-    
-//     //     // this.visitForm = document.getElementById("new-visit-form");
-//     //     // this.visitForm.addEventListener("submit", this.createPlaceVisit.bind(this))
-             }
-
+       }
 
         createPlace(e) {
             e.preventDefault()
@@ -38,8 +29,8 @@ class Places {
                 .then(place => {
                     this.places.unshift(new Place(place))
                     this.render()
-                })
-            }
+            })
+        }
 
             
         createPlaceVisit(e) {
@@ -63,21 +54,18 @@ class Places {
 
     handleSeeVisitsButton(e) {
         if (e.target.className === "index-visit-button") {
-        const x = document.getElementById("visit-div");
-        if (x.style.display === "none") { 
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        } 
-    }  
+            const x = document.getElementById("visit-div");
+            if (x.style.display === "none") { 
+                x.style.display = "block";
+            } else { x.style.display = "none"; } 
+        }  
     }
 
     handleAddVisitButton(e) {
-        console.log(e.target.className)
         if (e.target.className === "new-visit-button"){
-          const bu = e.target.id
-          const placeId = bu.split("_")[2]
-          this.places[placeId].renderNewPlaceVisitForm(placeId);
+            const bu = e.target.id
+            const placeId = bu.split("_")[2]
+            this.places[placeId].renderNewPlaceVisitForm(placeId);
         }
     }
 
@@ -88,14 +76,11 @@ class Places {
         })
         .then(() => {
              this.render() 
-            })
+        })
             
     }
 
     render() {    
         this.placesContainer.innerHTML = this.places.map(place => place.renderPlace()).join("")
     }
-
-    
-   
- }
+}

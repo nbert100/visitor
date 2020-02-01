@@ -5,7 +5,6 @@ class Api::V1::VisitsController < ApplicationController
             visits = Place.find_by_id(params[:place_id]).visits
         else
             visits = Visit.all 
-            #render json: visits, 
         end
          render json: visits, only: [:venue, :when_visited], include: :place, status: 200
     end
@@ -20,13 +19,6 @@ class Api::V1::VisitsController < ApplicationController
         if visit.save
             render json: visit, include: :place, status: 200
         end
-    end
-
-    def destroy
-        set_visit
-        visit.destroy
-        render json: ("Trip successfully deleted!")
-        #flash message
     end
 
     private
