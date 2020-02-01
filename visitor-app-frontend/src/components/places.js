@@ -19,7 +19,7 @@ class Places {
         this.visitVisitor = document.getElementById("visitor");
         this.visitComment = document.getElementById("comment");
         this.placeForm.addEventListener("submit", this.createPlace.bind(this))
-        this.placesContainer.addEventListener("click", this.handleSeeVisitsButtonClick.bind(this))
+        this.placesContainer.addEventListener("click", this.handleSeeVisitsButton.bind(this))
         this.placesContainer.addEventListener("click", this.handleAddVisitButton.bind(this))
         this.placesContainer.addEventListener("submit", this.createPlaceVisit.bind(this))
     
@@ -44,13 +44,12 @@ class Places {
             
         createPlaceVisit(e) {
             e.preventDefault()
-            debugger
-            const visit = {
+                const visit = {
                 venue: this.visitVenue.value,
                 visitor: this.visitVisitor.value,
                 when_visited: this.visitWhen.value,
-                comment: this.comment.value
-
+                comment: this.comment.value,
+                place_id: e.target.getAttribute("data-place-id")
             }
             this.visitAdapter.createVisit(visit)
             .then(visit => {
@@ -62,13 +61,15 @@ class Places {
         }
             // My visits are getting lost
 
-    handleSeeVisitsButtonClick(e) {
-        if (e.target.className === "index-visit-button"){
-            console.log(e.target.className)
-          const bu = e.target.id
-          const placeId = bu.split("_")[2]
-            this.places[placeId].renderPlaceVisits()         
-        }
+    handleSeeVisitsButton(e) {
+        if (e.target.className === "index-visit-button") {
+        const x = document.getElementById("visit-div");
+        if (x.style.display === "none") { 
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        } 
+    }  
     }
 
     handleAddVisitButton(e) {
@@ -94,4 +95,7 @@ class Places {
     render() {    
         this.placesContainer.innerHTML = this.places.map(place => place.renderPlace()).join("")
     }
+
+    
+   
  }

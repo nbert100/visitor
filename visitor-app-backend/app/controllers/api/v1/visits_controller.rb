@@ -16,7 +16,7 @@ class Api::V1::VisitsController < ApplicationController
     end
 
     def create
-        visit = place.visits.build(visit_params)
+        visit = Visit.new(visit_params)
         if visit.save
             render json: visit, include: :place, status: 200
         end

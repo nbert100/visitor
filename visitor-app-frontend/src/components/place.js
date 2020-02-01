@@ -9,11 +9,12 @@ class Place {
 
     
     renderPlaceVisits(){
-         return `<ul>${this.visits.map(visit => {
-                return `
+         return `
+         <div id="visit-div">${this.visits.map(visit => 
+                `
                 <li>${visit.venue}</li>
                 `
-            }).join("")}</ul>
+            ).join("")}</div>
            `   
          }
         
@@ -27,7 +28,7 @@ class Place {
 
     renderNewPlaceVisitForm(placeId) {
         const visitFormContainer = document.getElementById(`place-${placeId}`)
-        const visitForm = document.createElement("visit-form")
+        const visitForm = document.createElement("form")
         visitForm.setAttribute('data-place-id', placeId)
         visitForm.innerHTML = `
         Venue: <input type="text" name="venue" id="venue">
@@ -56,11 +57,13 @@ class Place {
 
 
     renderPlace() {
+        
         return `
         <div id="place-${this.id}">
             ${this.renderPlaceHeader()}
+            ${this.renderPlaceVisits()}
             ${this.renderNewVisitButton()}
-                        
+            
         </div>             
         `
     }
