@@ -28,6 +28,8 @@ class Places {
             this.placeAdapter.createPlace(place)
                 .then(place => {
                     this.places.unshift(new Place(place))
+                    this.newCity.value = ""
+                    this.newCountry.value = ""
                     this.render()
             })
         }
