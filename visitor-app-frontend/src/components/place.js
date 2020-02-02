@@ -12,14 +12,15 @@ class Place {
          return `
          <div id="visit-div">${this.visits.map(visit => 
                 `
-                <ul>${visit.venue}</ul>
+                <ul>${visit.venue} with ${visit.visitor}</ul> 
                 `
-            ).join("")}</div>
+         ).join("")}</div>
            `   
          }
         
     renderVisitButton() {
         return `<button type="button" class="index-visit-button" id="index_visit_${this.id}"> See Visits</button>`
+        
     }
 
     renderNewVisitButton() {
@@ -49,7 +50,7 @@ class Place {
     renderPlaceHeader() {
         return `
         <h4 data-id=${this.id} data-class="place-header">
-        ${this.city}, ${this.country} ${this.renderVisitButton()} 
+        ${this.city}, ${this.country} ${this.renderVisitButton()} ${this.renderNewVisitButton()} 
         </h4>
         `
     }
@@ -62,7 +63,7 @@ class Place {
         <div id="place-${this.id}">
             ${this.renderPlaceHeader()}
             ${this.renderPlaceVisits()}
-            ${this.renderNewVisitButton()}
+           
             
         </div>             
         `

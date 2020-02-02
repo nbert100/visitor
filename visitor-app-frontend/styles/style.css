@@ -1,14 +1,67 @@
 body {
     background-color: powderblue;
+    font-family: sans-serif;
   }
-  h2 {
+
+
+  h1 {
     color: blue;
   }
   p {
     color: red;
   }
 
-  .editable {
-    border: 5px solid black;
-    padding: 20px
+  .wrapper {
+    background: #FFFFFF
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    margin: 16px auto;
+    max-width: 960px;
+    padding: 7%;
+    width: 75%;
+    border-radius: 25px;
   }
+
+  .index-visit-button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #6495ED;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    transition-duration: 0.4s;
+  
+  }
+
+  .index-visit-button:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .new-visit-button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #6495ED;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    transition-duration: 0.4s;
+  }
+  
+  .new-visit-button:hover {
+    background-color: #DA70D6;
+    color: white;
+  }
+
+  

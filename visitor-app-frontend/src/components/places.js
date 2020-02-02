@@ -27,7 +27,7 @@ class Places {
             }
             this.placeAdapter.createPlace(place)
                 .then(place => {
-                    this.places.unshift(new Place(place))
+                    this.places.push(new Place(place))
                     this.newCity.value = ""
                     this.newCountry.value = ""
                     this.render()
@@ -48,6 +48,7 @@ class Places {
             .then(visit => {
                 const place = this.places.find(place => place.id === visit.place.id)
                 place.visits.push(visit)
+                
                 this.render()
             })
 
@@ -67,7 +68,7 @@ class Places {
         if (e.target.className === "new-visit-button"){
             const bu = e.target.id
             const placeId = bu.split("_")[2]
-            this.places[placeId].renderNewPlaceVisitForm(placeId);
+            this.places[placeId - 1].renderNewPlaceVisitForm(placeId);
         }
     }
 
