@@ -10,7 +10,7 @@ class Place {
     
     renderPlaceVisits(){
          return `
-         <div id="visit-div">${this.visits.map(visit => 
+         <div class="visit-div" id="visit-div-${this.id}">${this.visits.map(visit => 
                 `
                 <ul>${visit.venue} with ${visit.visitor}</ul> 
                 `

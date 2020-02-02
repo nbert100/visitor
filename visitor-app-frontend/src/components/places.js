@@ -57,7 +57,9 @@ class Places {
 
     handleSeeVisitsButton(e) {
         if (e.target.className === "index-visit-button") {
-            const x = document.getElementById("visit-div");
+            const bu = e.target.id
+            const placeId = bu.split("_")[2]
+            const x = document.getElementsByClassName("visit-div")[placeId - 1];            
             if (x.style.display === "none") { 
                 x.style.display = "block";
             } else { x.style.display = "none"; } 
