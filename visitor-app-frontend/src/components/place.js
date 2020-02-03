@@ -12,7 +12,7 @@ class Place {
          return `
          <div class="visit-div" id="visit-div-${this.id}">${this.visits.map(visit => 
                 `
-                <ul>${visit.venue} with ${visit.visitor}</ul> 
+                <ul>${visit.venue} with ${visit.visitor} on ${visit.when_visited}</ul> 
                 `
          ).join("")}</div>
            `   
