@@ -27,7 +27,7 @@ class Place {
         return `<button type="button" class="new-visit-button" id="new_visit_${this.id}"> New Visit </button>`
     }
 
-    renderNewPlaceVisitForm(placeId) {
+    static renderNewPlaceVisitForm(placeId) {
         const visitFormContainer = document.getElementById(`place-${placeId}`)
         const visitForm = document.createElement("form")
         visitForm.setAttribute('data-place-id', placeId)

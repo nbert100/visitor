@@ -1,8 +1,12 @@
 class Api::V1::PlacesController < ApplicationController
 
     def create
-        place = Place.create(place_params)
-        render json: place, include: :visits
+        place = Place.new(place_params)
+        if place.save
+            render json: place, include: :visits
+        else
+            render json: { errors: place.errors.full_messages }, status: 422
+        end        
     end
     
     def index
