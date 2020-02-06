@@ -18,26 +18,19 @@ class Places {
         this.placesContainer.addEventListener("click", this.handleAddVisitButton.bind(this))
         this.placesContainer.addEventListener("submit", this.createPlaceVisit.bind(this))
        }
-    //    validatePlace(place){
-    //        //iterate over place obj using for..in loop to check if any of the values are "", if so return false else true
-    //    }
+  
         createPlace(e) {
             e.preventDefault()
             const place = {
                 city: this.newCity.value,
                 country: this.newCountry.value
             }
-            // add validatePlace function (true/false)
-            //if(this.validatePlace(place)){
-
-            //}
             this.placeAdapter.createPlace(place)
                 .then(place => {
                     if (place.errors) {
                         this.renderErrors(place.errors)
                     }
                     else {
-                    console.log(place)
                     this.places.push(new Place(place))
                     this.newCity.value = ""
                     this.newCountry.value = ""
@@ -50,7 +43,6 @@ class Places {
             
         createPlaceVisit(e) {
             e.preventDefault()
-            //clear any prev. errors
                 const visit = {
                 venue: e.target.querySelector("#venue").value,
                 visitor: e.target.querySelector("#visitor").value,
@@ -60,10 +52,13 @@ class Places {
             }
             this.visitAdapter.createVisit(visit)
             .then(visit => {
+                if (visit.errors) {
+                    this.renderErrors(visit.errors)
+                } else {
                 const place = this.places.find(place => place.id === visit.place.id)
                 place.visits.push(visit)
-                
                 this.render()
+                }
             })
 
         }
@@ -100,11 +95,7 @@ class Places {
     }
 
     renderErrors(errors) {
-       // const pTag = document.createElement("p")
-        ////pTag.innerText = `${errors.join(" ")}`
-        //give pTag a classname
-       // document.getElementById("new-city").setAttribute("placeholder", errors.join(" "))
-       alert(errors.join(" "))
+        alert(errors.join(" "))
     }
 
     render() {    

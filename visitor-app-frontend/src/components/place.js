@@ -12,7 +12,8 @@ class Place {
          return `
          <div class="visit-div" id="visit-div-${this.id}">${this.visits.map(visit => 
                 `
-                <ul>${visit.venue} with ${visit.visitor} on ${visit.when_visited}</ul> 
+                <ul>${visit.venue} with ${visit.visitor} on ${visit.when_visited}</ul>
+                <p>"${visit.comment}"</p> 
                 `
          ).join("")}</div>
            `   
@@ -32,9 +33,9 @@ class Place {
         const visitForm = document.createElement("form")
         visitForm.setAttribute('data-place-id', placeId)
         visitForm.innerHTML = `
-        Venue: <input type="text" name="venue" id="venue">
+        Venue: <input type="text" name="venue" id="venue" required>
         <br>
-        Travel Buddy: <input type="text" name="visitor" id="visitor">
+        Travel Buddy: <input type="text" name="visitor" id="visitor" required>
         <br>
         When: <input type="date" name="when_visited" id="when_visited">
         <br>
@@ -56,15 +57,12 @@ class Place {
     }
 
 
-
     renderPlace() {
         
         return `
         <div id="place-${this.id}">
             ${this.renderPlaceHeader()}
             ${this.renderPlaceVisits()}
-           
-            
         </div>             
         `
     }

@@ -18,6 +18,8 @@ class Api::V1::VisitsController < ApplicationController
         visit = Visit.new(visit_params)
         if visit.save
             render json: visit, include: :place, status: 200
+        else
+            render json: { errors: visit.errors.full_messages }, status 422
         end
     end
 

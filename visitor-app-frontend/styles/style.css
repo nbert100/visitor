@@ -31,7 +31,8 @@ body {
 
   }
   p {
-    color: red;
+    color: darkmagenta;
+    text-indent: 75px;
   }
 
   .wrapper {
